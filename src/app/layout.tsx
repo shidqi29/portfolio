@@ -12,16 +12,13 @@ export const metadata: Metadata = {
   title: "Shidqi Amirul Haq | Front-End Developer",
   description:
     "Welcome to the personal website of Shidqi Amirul Haq, a dedicated Front-End Developer with a passion for creating intuitive and engaging digital experiences. Explore my projects, skills, and get in touch for collaboration.",
-  icons: {
-    icon: "/me.png",
-  },
   openGraph: {
     type: "website",
     url: "https://shidqiamrlhaq.vercel.app",
     siteName: "Shidqi Amirul Haq | Front-End Developer",
     images: [
       {
-        url: "/me.png",
+        url: "https://shidqiamrlhaq.vercel.app/icon.png",
         alt: "Shidqi Amirul Haq | Front-End Developer",
       },
     ],
