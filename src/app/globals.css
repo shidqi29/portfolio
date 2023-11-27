@@ -79,7 +79,6 @@ html {
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    /* @apply bg-gradient-to-t from-secondary-foreground to-accent; */
     @apply bg-accent;
     border-radius: 5px;
     -webkit-border-radius: 5px;
