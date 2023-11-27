@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Shidqi Amirul Haq | Front-End Developer",
   description:
-    "Welcome to the personal website of Shidqi Amirul Haq, a dedicated Front-End Developer with a passion for creating intuitive and engaging digital experiences. Explore my projects, skills, and get in touch for collaboration.",
+    "Welcome to my personal website. Explore my projects, skills, and get in touch for collaboration.",
   openGraph: {
     type: "website",
     url: "https://shidqiamrlhaq.vercel.app",
