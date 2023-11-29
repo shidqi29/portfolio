@@ -1,5 +1,6 @@
 import { Linkedin, Github, Instagram } from "lucide-react";
 
+
 export const socials = [
   {
     name: "LinkedIn",
@@ -17,3 +18,5 @@ export const socials = [
     Icon: Instagram,
   },
 ];
+
+

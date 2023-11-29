@@ -7,7 +7,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { socials } from "@/constant/socials";
+import { skills, socials } from "@/constant";
 
 export default function Home() {
   return (
@@ -36,14 +36,14 @@ export default function Home() {
               rel="noopener noreferrer"
               aria-label={social.name}
             >
-              <Tooltip>
+              <Tooltip delayDuration={500}>
                 <TooltipTrigger asChild>
                   <social.Icon
                     size={28}
                     className="transition-colors hover:text-accent"
                   />
                 </TooltipTrigger>
-                <TooltipContent>
+                <TooltipContent side="bottom">
                   <span>{social.name}</span>
                 </TooltipContent>
               </Tooltip>
@@ -61,7 +61,7 @@ export default function Home() {
         </div>
         <div className="grid gap-y-4 md:grid-cols-2">
           <Image
-            alt=""
+            alt="Profile Picture"
             src="/me.png"
             width={260}
             height={260}
@@ -82,6 +82,38 @@ export default function Home() {
             . Enthusiastic about learning new technologies and committed to
             delivering an outstanding user experience.
           </p>
+        </div>
+      </section>
+
+      <section className="mx-auto flex min-h-screen max-w-screen-md snap-start flex-col items-center justify-center gap-y-10 py-10">
+        <div className="flex flex-col">
+          <h1 className="bg-gradient-to-bl from-secondary-foreground to-accent bg-clip-text text-2xl font-semibold text-transparent md:text-4xl">
+            Skills
+          </h1>
+          <Separator className="my-2" />
+        </div>
+        <div>
+          <ul className="flex flex-wrap justify-center gap-5">
+            {skills.map((skill) => (
+              <li
+                key={skill.name}
+                className="flex rounded-lg border border-secondary bg-primary p-6 transition hover:border-accent hover:text-accent"
+                aria-label={skill.name}
+              >
+                <Tooltip delayDuration={500}>
+                  <TooltipTrigger asChild>
+                    <div className="flex w-16 flex-col items-center md:font-medium">
+                      {skill.icon}
+                      {skill.name}
+                    </div>
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom">
+                    <span>{skill.level}</span>
+                  </TooltipContent>
+                </Tooltip>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
     </>
