@@ -53,7 +53,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mx-auto flex min-h-screen max-w-screen-md snap-start flex-col items-center justify-center gap-y-10">
+      <section className="mx-auto flex min-h-screen max-w-screen-md snap-start flex-col items-center justify-center gap-y-10 py-10">
         <div className="flex flex-col">
           <h1 className="bg-gradient-to-bl from-secondary-foreground to-accent bg-clip-text text-2xl font-semibold text-transparent md:text-4xl">
             About Me
@@ -137,8 +137,8 @@ export default function Home() {
                   <Image
                     alt={project.name}
                     src={project.image}
-                    width={500}
-                    height={200}
+                    width={1280}
+                    height={720}
                     className="rounded-lg"
                     priority
                   />
