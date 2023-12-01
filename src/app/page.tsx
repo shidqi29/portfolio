@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BsGithub, BsBoxArrowUpRight } from "react-icons/bs";
 
 import { Separator } from "@/components/ui/separator";
 import {
@@ -7,7 +8,7 @@ import {
   TooltipContent,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { skills, socials } from "@/constant";
+import { projects, skills, socials } from "@/constant";
 
 export default function Home() {
   return (
@@ -114,6 +115,69 @@ export default function Home() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      <section className="mx-auto flex min-h-screen w-full max-w-screen-lg snap-start flex-col items-center justify-center gap-y-10 py-10">
+        <div className="flex flex-col">
+          <h1 className="bg-gradient-to-bl from-secondary-foreground to-accent bg-clip-text text-2xl font-semibold text-transparent md:text-4xl">
+            Projects
+          </h1>
+          <Separator className="my-2" />
+        </div>
+        <div>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            {projects.map((project) => (
+              <div
+                key={project.name}
+                className="flex flex-col rounded-xl border border-secondary bg-primary p-6 transition hover:border-accent"
+                aria-label={project.name}
+              >
+                <div className="flex h-full flex-col">
+                  <Image
+                    alt={project.name}
+                    src={project.image}
+                    width={500}
+                    height={200}
+                    className="rounded-lg"
+                    priority
+                  />
+                  <div className="my-4 flex h-full w-full flex-col">
+                    <div className="flex items-center justify-between">
+                      <h1 className="text-lg font-bold md:text-xl">
+                        {project.name}
+                      </h1>
+                      <Link
+                        href={project.repository}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Github Repository"
+                      >
+                        <Tooltip delayDuration={500}>
+                          <TooltipTrigger asChild>
+                            <BsGithub className="ml-2 inline-block text-2xl md:text-3xl" />
+                          </TooltipTrigger>
+                          <TooltipContent side="bottom">
+                            <span>Github</span>
+                          </TooltipContent>
+                        </Tooltip>
+                      </Link>
+                    </div>
+                    <p className="mt-2 text-sm">{project.description}</p>
+                  </div>
+                  <Link
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="ml-auto mt-3 flex w-fit items-center gap-x-2 rounded-lg bg-secondary px-4 py-2 text-lg font-semibold transition-[background-color] duration-300 hover:bg-accent hover:text-secondary"
+                    aria-label="Visit Project"
+                  >
+                    Visit <BsBoxArrowUpRight />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>
