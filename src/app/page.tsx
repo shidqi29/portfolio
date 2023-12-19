@@ -9,6 +9,7 @@ import {
   TooltipTrigger,
 } from "@/components/ui/tooltip";
 import { projects, skills, socials } from "@/constant";
+import { buttonVariants } from "@/components/ui/button";
 
 export default function Home() {
   return (
@@ -28,28 +29,38 @@ export default function Home() {
           </p>
         </div>
         <Separator className="my-4" />
-        <div className="flex w-full flex-wrap gap-x-4">
-          {socials.map((social) => (
-            <Link
-              key={social.name}
-              href={social.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label={social.name}
-            >
-              <Tooltip delayDuration={500}>
-                <TooltipTrigger asChild>
-                  <social.Icon
-                    size={28}
-                    className="transition-colors hover:text-accent"
-                  />
-                </TooltipTrigger>
-                <TooltipContent side="bottom">
-                  <span>{social.name}</span>
-                </TooltipContent>
-              </Tooltip>
-            </Link>
-          ))}
+        <div className="flex w-full items-center justify-between">
+          <div className="flex w-full flex-wrap gap-x-4">
+            {socials.map((social) => (
+              <Link
+                key={social.name}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={social.name}
+              >
+                <Tooltip delayDuration={500}>
+                  <TooltipTrigger asChild>
+                    <social.Icon
+                      size={28}
+                      className="transition-colors hover:text-accent"
+                    />
+                  </TooltipTrigger>
+                  <TooltipContent side="bottom">
+                    <span>{social.name}</span>
+                  </TooltipContent>
+                </Tooltip>
+              </Link>
+            ))}
+          </div>
+          <Link
+            href="https://shorturl.at/dgjJV"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={buttonVariants({ variant: "ghost" })}
+          >
+            Download CV
+          </Link>
         </div>
       </section>
 
