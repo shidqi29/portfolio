@@ -144,15 +144,17 @@ export default function Home() {
                 className="flex flex-col rounded-xl border border-secondary bg-primary p-6 transition hover:border-accent"
                 aria-label={project.name}
               >
-                <div className="flex h-full flex-col">
-                  <Image
-                    alt={project.name}
-                    src={project.image}
-                    width={1280}
-                    height={720}
-                    className="rounded-lg"
-                    priority
-                  />
+                <div className="relative flex flex-col">
+                  <figure className="max-h-44 md:max-h-56">
+                    <Image
+                      alt={project.name}
+                      src={project.image}
+                      width={1280}
+                      height={720}
+                      className="h-full w-full rounded-lg object-cover object-top"
+                      priority
+                    />
+                  </figure>
                   <div className="my-4 flex h-full w-full flex-col">
                     <div className="flex items-center justify-between">
                       <h1 className="text-lg font-bold md:text-xl">

@@ -35,6 +35,15 @@ export const projects: Project[] = [
       "https://i.ibb.co/HrL1M57/Web-capture-14-12-2023-115025-fp2-hacktiv8-3-vercel-app.jpg",
   },
   {
+    name: "Paradise View - Booking Hotel App",
+    description:
+      "Paradise View is an app that allows users to book hotel rooms. This app is created for final project 3 of Hacktiv8's Kampus Merdeka program. Created using React Native, Expo, and Redux.",
+    url: "https://github.com/Final-Project-Hacktiv8-3/Final-Project-3",
+    repository: "https://github.com/Final-Project-Hacktiv8-3/Final-Project-3",
+    image:
+      "https://i.ibb.co/5r3JR5Y/Screenshot-2023-12-12-11-46-45-807-host-exp-exponent.jpg",
+  },
+  {
     name: "Movies App",
     description:
       "A website that allows users to explore and discover movies from various genres. This website is created for final project 4 of Hacktiv8's Kampus Merdeka program. Created using ReactJS, Redux, and Tailwind CSS.",
@@ -60,5 +69,13 @@ export const projects: Project[] = [
     repository: "https://github.com/shidqi29/SPICES-recipe-app",
     image:
       "https://i.ibb.co/26GNL2S/Web-capture-1-12-2023-161555-localhost.jpg",
+  },
+  {
+    name: "Todolist App",
+    description: "A simple todolist app created using Flutter.",
+    url: "https://github.com/shidqi29/todolist_app",
+    repository: "https://github.com/shidqi29/todolist_app",
+    image:
+      "https://camo.githubusercontent.com/ce47c95902d1ad5682807a41e971417fabb021ad3c1ae8c655f79402f326f98c/68747470733a2f2f692e696d6775722e636f6d2f794867415a69412e6a7067",
   },
 ];
