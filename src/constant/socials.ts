@@ -1,5 +1,4 @@
-import { Linkedin, Github, Instagram } from "lucide-react";
-
+import { Linkedin, Github, Mail } from "lucide-react";
 
 export const socials = [
   {
@@ -13,10 +12,8 @@ export const socials = [
     Icon: Github,
   },
   {
-    name: "Instagram",
-    url: "https://www.instagram.com/shidqiamrlhaq/",
-    Icon: Instagram,
+    name: "Email",
+    url: "mailto:shidqiamirulhaq@gmail.com",
+    Icon: Mail,
   },
 ];
-
-

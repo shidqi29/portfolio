@@ -2,11 +2,27 @@ type Project = {
   name: string;
   description: string;
   url: string;
-  repository: string;
+  repository?: string;
   image: string;
 };
 
 export const projects: Project[] = [
+  {
+    name: "Boomerce (Book ecommerce)",
+    description:
+      "Boomerce is an ecommerce platform that allows users to browse and purchase books online. This website is created for final project of Sanbercode Bootcamp Golang & NextJS. Created using NextJS, Tailwind CSS, Golang, and MySQL.",
+    url: "https://boomerce.vercel.app/",
+    image:
+      "https://i.ibb.co.com/n1sj8dW/Screenshot-9-9-2024-235814-localhost.jpg",
+  },
+  {
+    name: "Sistem Pengelolaan Zakat Masjid",
+    description:
+      "A website that manages the zakat fund. Created using NextJS, Tailwind CSS, ExpressJS, PrismaORM, and Supabase.",
+    url: "https://masjid-alhidayah-narongtong.vercel.app/",
+    image:
+      "https://i.ibb.co.com/2qz2qSr/Screenshot-10-9-2024-02524-masjid-alhidayah-narongtong-vercel-app.jpg",
+  },
   {
     name: "Cek Rumah Sakit Indonesia",
     description:
@@ -14,7 +30,7 @@ export const projects: Project[] = [
     url: "https://cekrs.vercel.app/",
     repository: "https://github.com/shidqi29/cekrs",
     image:
-      "https://i.ibb.co/dMwGyPq/Web-capture-1-12-2023-17315-cekrs-vercel-app.jpg",
+      "https://i.ibb.co.com/dMwGyPq/Web-capture-1-12-2023-17315-cekrs-vercel-app.jpg",
   },
   {
     name: "News App",
@@ -23,7 +39,7 @@ export const projects: Project[] = [
     url: "https://fp1-hacktiv8-3.vercel.app/",
     repository: "https://github.com/Final-Project-Hacktiv8-3/Final-Project-1",
     image:
-      "https://i.ibb.co/yRN2Lwg/Web-capture-14-12-2023-11451-localhost.jpg",
+      "https://i.ibb.co.com/yRN2Lwg/Web-capture-14-12-2023-11451-localhost.jpg",
   },
   {
     name: "Bukapedia - Ecommerce App",
@@ -32,7 +48,7 @@ export const projects: Project[] = [
     url: "https://fp2-hacktiv8-3.vercel.app/",
     repository: "https://github.com/Final-Project-Hacktiv8-3/Final-Project-2",
     image:
-      "https://i.ibb.co/HrL1M57/Web-capture-14-12-2023-115025-fp2-hacktiv8-3-vercel-app.jpg",
+      "https://i.ibb.co.com/HrL1M57/Web-capture-14-12-2023-115025-fp2-hacktiv8-3-vercel-app.jpg",
   },
   {
     name: "Paradise View - Booking Hotel App",
@@ -41,7 +57,7 @@ export const projects: Project[] = [
     url: "https://github.com/Final-Project-Hacktiv8-3/Final-Project-3",
     repository: "https://github.com/Final-Project-Hacktiv8-3/Final-Project-3",
     image:
-      "https://i.ibb.co/5r3JR5Y/Screenshot-2023-12-12-11-46-45-807-host-exp-exponent.jpg",
+      "https://i.ibb.co.com/5r3JR5Y/Screenshot-2023-12-12-11-46-45-807-host-exp-exponent.jpg",
   },
   {
     name: "Movies App",
@@ -50,7 +66,7 @@ export const projects: Project[] = [
     url: "https://fp4-hacktiv8-3.vercel.app/",
     repository: "https://github.com/Final-Project-Hacktiv8-3/Final-Project-4",
     image:
-      "https://i.ibb.co/4NYBGc2/Web-capture-14-12-2023-115144-fp4-hacktiv8-3-vercel-app.jpg",
+      "https://i.ibb.co.com/4NYBGc2/Web-capture-14-12-2023-115144-fp4-hacktiv8-3-vercel-app.jpg",
   },
   {
     name: "AnyMovie!",
@@ -59,23 +75,23 @@ export const projects: Project[] = [
     url: "https://anymovie.vercel.app/",
     repository: "https://github.com/shidqi29/anymovie",
     image:
-      "https://i.ibb.co/yRNVH7d/Web-capture-1-12-2023-93938-anymovie-vercel-app-2.jpg",
+      "https://i.ibb.co.com/yRNVH7d/Web-capture-1-12-2023-93938-anymovie-vercel-app-2.jpg",
   },
-  {
-    name: "SPICES - Recipe App",
-    description:
-      "A website dedicated to Sharing Palatable International Culinary Experiences & Secrets. Created using ReactJS and Tailwind CSS.",
-    url: "https://spices-recipe-app.vercel.app/",
-    repository: "https://github.com/shidqi29/SPICES-recipe-app",
-    image:
-      "https://i.ibb.co/26GNL2S/Web-capture-1-12-2023-161555-localhost.jpg",
-  },
-  {
-    name: "Todolist App",
-    description: "A simple todolist app created using Flutter.",
-    url: "https://github.com/shidqi29/todolist_app",
-    repository: "https://github.com/shidqi29/todolist_app",
-    image:
-      "https://camo.githubusercontent.com/ce47c95902d1ad5682807a41e971417fabb021ad3c1ae8c655f79402f326f98c/68747470733a2f2f692e696d6775722e636f6d2f794867415a69412e6a7067",
-  },
+  // {
+  //   name: "SPICES - Recipe App",
+  //   description:
+  //     "A website dedicated to Sharing Palatable International Culinary Experiences & Secrets. Created using ReactJS and Tailwind CSS.",
+  //   url: "https://spices-recipe-app.vercel.app/",
+  //   repository: "https://github.com/shidqi29/SPICES-recipe-app",
+  //   image:
+  //     "https://i.ibb.co/26GNL2S/Web-capture-1-12-2023-161555-localhost.jpg",
+  // },
+  // {
+  //   name: "Todolist App",
+  //   description: "A simple todolist app created using Flutter.",
+  //   url: "https://github.com/shidqi29/todolist_app",
+  //   repository: "https://github.com/shidqi29/todolist_app",
+  //   image:
+  //     "https://camo.githubusercontent.com/ce47c95902d1ad5682807a41e971417fabb021ad3c1ae8c655f79402f326f98c/68747470733a2f2f692e696d6775722e636f6d2f794867415a69412e6a7067",
+  // },
 ];

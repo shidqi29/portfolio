@@ -9,7 +9,9 @@ import {
   TbBrandNextjs,
   TbBrandRedux,
   TbBrandGit,
+  TbBrandGolang,
 } from "react-icons/tb";
+import { SiExpress } from "react-icons/si";
 
 const iconSize = "100%";
 
@@ -42,7 +44,7 @@ export const skills = [
   {
     name: "Typescript",
     icon: <TbBrandTypescript size={iconSize} />,
-    level: "Beginner",
+    level: "Intermediate",
   },
   {
     name: "ReactJS",
@@ -52,12 +54,22 @@ export const skills = [
   {
     name: "NextJS",
     icon: <TbBrandNextjs size={iconSize} />,
-    level: "Beginner",
+    level: "Intermediate",
   },
   {
     name: "Redux",
     icon: <TbBrandRedux size={iconSize} />,
     level: "Intermediate",
+  },
+  {
+    name: "ExpressJS",
+    icon: <SiExpress size={iconSize} />,
+    level: "Beginner",
+  },
+  {
+    name: "Golang",
+    icon: <TbBrandGolang size={iconSize} />,
+    level: "Beginner",
   },
   {
     name: "Git",

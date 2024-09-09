@@ -1,7 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ["i.ibb.co", "picsum.photos", "camo.githubusercontent.com"],
+    remotePatterns: [
+      { hostname: "i.ibb.co" },
+      { hostname: "i.ibb.co.com" },
+      { hostname: "picsum.photos" },
+      { hostname: "camo.githubusercontent.com" },
+    ],
   },
 };
 

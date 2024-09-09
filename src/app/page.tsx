@@ -29,8 +29,8 @@ export default function Home() {
           </p>
         </div>
         <Separator className="my-4" />
-        <div className="flex w-full items-center justify-between">
-          <div className="flex w-full flex-wrap gap-x-4">
+        <div className="flex w-full items-center justify-between px-2">
+          <div className="flex w-full flex-wrap gap-x-2">
             {socials.map((social) => (
               <Link
                 key={social.name}
@@ -38,15 +38,13 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label={social.name}
+                className="rounded-md p-2 transition-all hover:bg-accent hover:text-background"
               >
                 <Tooltip delayDuration={500}>
                   <TooltipTrigger asChild>
-                    <social.Icon
-                      size={28}
-                      className="transition-colors hover:text-accent"
-                    />
+                    <social.Icon size={28} />
                   </TooltipTrigger>
-                  <TooltipContent side="bottom">
+                  <TooltipContent side="top">
                     <span>{social.name}</span>
                   </TooltipContent>
                 </Tooltip>
@@ -54,7 +52,7 @@ export default function Home() {
             ))}
           </div>
           <Link
-            href="https://shorturl.at/dgjJV"
+            href="https://shorturl.at/r0iVs"
             target="_blank"
             rel="noopener noreferrer"
             className={buttonVariants({ variant: "ghost" })}
@@ -84,15 +82,14 @@ export default function Home() {
             <span className="bg-gradient-to-bl from-secondary-foreground to-accent bg-clip-text font-bold text-transparent">
               Shidqi Amirul Haq
             </span>
-            , a 7th semester student pursuing a degree in informatics
-            engineering at Institut Teknologi Garut with a strong foundation in
-            HTML, CSS, and JavaScript. Specializing in crafting responsive and
+            , a frontend web developer with a deep enthusiasm for learning the
+            latest technologies and a commitment to delivering outstanding user
+            experiences. I have a deep understanding of building engaging and
+            responsive user interfaces. Specializing in crafting responsive and
             engaging user interfaces using{" "}
             <span className="bg-gradient-to-bl from-secondary-foreground to-accent bg-clip-text font-bold text-transparent">
-              ReactJS
+              ReactJS.
             </span>
-            . Enthusiastic about learning new technologies and committed to
-            delivering an outstanding user experience.
           </p>
         </div>
       </section>
@@ -112,17 +109,17 @@ export default function Home() {
                 className="flex rounded-lg border border-secondary bg-primary p-6 transition hover:border-accent hover:text-accent"
                 aria-label={skill.name}
               >
-                <Tooltip delayDuration={500}>
-                  <TooltipTrigger asChild>
-                    <div className="flex w-16 flex-col items-center md:font-medium">
-                      {skill.icon}
-                      {skill.name}
-                    </div>
-                  </TooltipTrigger>
-                  <TooltipContent side="bottom">
-                    <span>{skill.level}</span>
-                  </TooltipContent>
-                </Tooltip>
+                {/* <Tooltip delayDuration={500}>
+                  <TooltipTrigger asChild> */}
+                <div className="flex w-16 flex-col items-center md:font-medium">
+                  {skill.icon}
+                  {skill.name}
+                </div>
+                {/* </TooltipTrigger>
+                  <TooltipContent side="bottom"> */}
+                {/* <span>{skill.level}</span> */}
+                {/* </TooltipContent>
+                </Tooltip> */}
               </li>
             ))}
           </ul>
@@ -141,10 +138,10 @@ export default function Home() {
             {projects.map((project) => (
               <div
                 key={project.name}
-                className="flex flex-col rounded-xl border border-secondary bg-primary p-6 transition hover:border-accent"
+                className="flex h-full flex-col rounded-xl border border-secondary bg-primary p-6 transition hover:border-accent"
                 aria-label={project.name}
               >
-                <div className="relative flex flex-col">
+                <div className="relative flex h-full flex-col">
                   <figure className="max-h-44 md:max-h-56">
                     <Image
                       alt={project.name}
@@ -160,21 +157,23 @@ export default function Home() {
                       <h1 className="text-lg font-bold md:text-xl">
                         {project.name}
                       </h1>
-                      <Link
-                        href={project.repository}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label="Github Repository"
-                      >
-                        <Tooltip delayDuration={500}>
-                          <TooltipTrigger asChild>
-                            <BsGithub className="ml-2 inline-block text-2xl md:text-3xl" />
-                          </TooltipTrigger>
-                          <TooltipContent side="bottom">
-                            <span>Github</span>
-                          </TooltipContent>
-                        </Tooltip>
-                      </Link>
+                      {project.repository && (
+                        <Link
+                          href={project.repository}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label="Github Repository"
+                        >
+                          <Tooltip delayDuration={500}>
+                            <TooltipTrigger asChild>
+                              <BsGithub className="ml-2 inline-block text-2xl md:text-3xl" />
+                            </TooltipTrigger>
+                            <TooltipContent side="bottom">
+                              <span>Github</span>
+                            </TooltipContent>
+                          </Tooltip>
+                        </Link>
+                      )}
                     </div>
                     <p className="mt-2 text-sm">{project.description}</p>
                   </div>
