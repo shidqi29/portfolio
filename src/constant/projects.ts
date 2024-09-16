@@ -18,7 +18,7 @@ export const projects: Project[] = [
   {
     name: "Sistem Pengelolaan Zakat Masjid",
     description:
-      "A website that manages the zakat fund. Created using NextJS, Tailwind CSS, ExpressJS, PrismaORM, and Supabase.",
+      "A website that manages the zakat fund. Created using NextJS, Tailwind CSS, ExpressJS, PrismaORM, and PosgreSQL.",
     url: "https://masjid-alhidayah-narongtong.vercel.app/",
     image:
       "https://i.ibb.co.com/2qz2qSr/Screenshot-10-9-2024-02524-masjid-alhidayah-narongtong-vercel-app.jpg",
