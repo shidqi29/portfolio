@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test:under-construction": "node scripts/check-under-construction.mjs"
   },
   "dependencies": {
     "@radix-ui/react-separator": "^1.0.3",
